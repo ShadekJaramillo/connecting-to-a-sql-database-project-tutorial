@@ -24,15 +24,7 @@ with open(r'src/sql/insert.sql') as insert_tables_script:
 with open(r'src/sql/drop.sql') as drop_tables_script:
     drop_tables_text = text(drop_tables_script.read())
 
-# print(drop_tables_str, type(drop_tables_str), drop_tables_str=="""DROP TABLE IF EXISTS book_authors;
-
-# DROP TABLE IF EXISTS books;
-
-# DROP TABLE IF EXISTS authors;
-
-# DROP TABLE IF EXISTS publishers;""")
-
-# Load environment variables
+# Load environment variables to the python app
 load_dotenv()
 
 # 1) Connect to the database with SQLAlchemy
