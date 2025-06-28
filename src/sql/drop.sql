@@ -1,7 +1,7 @@
-DROP TABLE book_authors;
+DROP TABLE IF EXISTS book_authors;
 
-DROP TABLE books;
+DROP TABLE IF EXISTS books;
 
-DROP TABLE authors;
+DROP TABLE IF EXISTS authors;
 
-DROP TABLE publishers;
+DROP TABLE IF EXISTS publishers;

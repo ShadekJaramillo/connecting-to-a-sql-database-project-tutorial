@@ -1,10 +1,10 @@
-CREATE TABLE publishers(
+CREATE TABLE IF NOT EXISTS publishers(
     publisher_id INT NOT NULL,
     name VARCHAR(255) NOT NULL,
     PRIMARY KEY(publisher_id)
 );
 
-CREATE TABLE authors(
+CREATE TABLE IF NOT EXISTS authors(
     author_id INT NOT NULL,
     first_name VARCHAR(100) NOT NULL,
     middle_name VARCHAR(50) NULL,
@@ -12,7 +12,7 @@ CREATE TABLE authors(
     PRIMARY KEY(author_id)
 );
 
-CREATE TABLE books(
+CREATE TABLE IF NOT EXISTS books(
     book_id INT NOT NULL,
     title VARCHAR(255) NOT NULL,
     total_pages INT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE books(
     CONSTRAINT fk_publisher FOREIGN KEY(publisher_id) REFERENCES publishers(publisher_id)
 );
 
-CREATE TABLE book_authors (
+CREATE TABLE IF NOT EXISTS book_authors (
     book_id INT NOT NULL,
     author_id INT NOT NULL,
     PRIMARY KEY(book_id, author_id),
